@@ -11,7 +11,12 @@
 				font-family: "Roadgeek2005SeriesD";
 				src: url("http://panic.com/fonts/Roadgeek 2005 Series D/Roadgeek 2005 Series D.otf");
 			}
-			
+
+			@media screen {
+				body {
+					background: black;
+				}
+			}			
 			body, *
 			{
 			
