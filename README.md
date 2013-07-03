@@ -112,3 +112,8 @@ Contributors
 ============
 
 * [Abraham Williams](https://twitter.com/abraham) - Main developer, current maintainer.
+=======
+politwoops-status-board-followers
+=================================
+
+Follower counts for the various twitter accounts of Politwoops, suited for Panic's Status Board
