@@ -17,9 +17,9 @@
 					background: black;
 				}
 			}			
-			body, *
+			html, body, *
 			{
-			
+				background: #444;			
 			}
 			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td
 			{ 
@@ -49,7 +49,7 @@
 			}
 			body, html, #main
 			{
-				background: transparent !important;
+			/*	background: transparent !important; */
 			}
 			
 			#spacepeopleContainer
@@ -92,12 +92,14 @@ function refresh() {
         $('#listing').empty();
         $.each(data, function (idx, item) {
           var counter = $('<div class="counter"></div>');
+          var link = $('<a href="https://twitter.com/' + item.user_name + '" target="_blank" />');
           if (typeof(item.flag) != 'undefined') {
-              counter.append($('<img src="http://www.politwoops.nl/images/flags/' + item.flag + '.png" />'));
+              link.append($('<img src="http://www.politwoops.nl/images/flags/' + item.flag + '.png" />'));
           } else {
-              counter.append($('<img src="http://www.politwoops.nl/images/favicon.png" />'));
+              link.append($('<img src="http://www.politwoops.nl/images/favicon.png" />'));
               //counter.append($('<h2>' + item.user_name + '</h2>'));
           }
+          counter.append(link);
           counter.append(item.followers);
           $('#listing').append(counter);
           total += item.followers;

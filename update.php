@@ -43,8 +43,10 @@ $content = '';
 foreach($results->users as $user) {
   $countries[strtolower($user->screen_name)]['user_name'] = $user->screen_name;
   $countries[strtolower($user->screen_name)]['followers'] = $user->followers_count;
+  $countries[strtolower($user->screen_name)]['user'] = $user;
 }
 
+header('Content-type: application/json');
 echo json_encode(array_values($countries));
 
 //var_dump($results);
